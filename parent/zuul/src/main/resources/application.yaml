@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: zuul
+server:
+  port: 5555
+eureka:
+  client:
+    service-url:
+      # 写上所有服务端地址,这样在部分服务挂掉重启之后客户端也能注册上去
+      defaultZone: http://eureka1:8771/eureka/,http://eureka2:8772/eureka/,http://eureka3:8773/eureka/
+zuul:
+  prefix: /api
+  routes:
+    eurekaclient1:
+      path: /api-a/**
+      url: eurekaclient1
+      strip-prefix: true
+    eurekaclient2:
+      path: /api-b/**
+      url: eurekaclient2

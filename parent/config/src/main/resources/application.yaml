@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        # 这里使用的是git仓库 其他例如svn仓库配置不一样 百度
+        git:
+          # 远端git
+          uri: https://gitee.com/a_1336192963/springcloudconfig.git
+          username: 1336192963@qq.com
+          password: Zxx5201314Li
+          # 配置本地git仓库地址
+          basedir: D:\idea project\parent\config\git_file
+          search-paths: {application}
+  profiles:
+    active: test
+  security:
+    user:
+      name: user
+      password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:8771/eureka/,http://eureka2:8772/eureka/,http://eureka3:8773/eureka/
+server:
+  port: 8888

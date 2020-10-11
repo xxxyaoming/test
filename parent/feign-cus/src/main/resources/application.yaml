@@ -1,0 +1,13 @@
+eureka:
+  client:
+    service-url:
+      # 写上所有服务端地址,这样在部分服务挂掉重启之后客户端也能注册上去
+      defaultZone: http://eureka1:8771/eureka/,http://eureka2:8772/eureka/,http://eureka3:8773/eureka/
+spring:
+  application:
+    name: feign-cus
+server:
+  port: 8785
+feign:
+  hystrix:
+    enabled: true

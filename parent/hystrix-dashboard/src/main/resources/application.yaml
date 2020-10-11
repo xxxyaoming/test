@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: hystric-dashboard
+server:
+  port: 9999
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: eureka1

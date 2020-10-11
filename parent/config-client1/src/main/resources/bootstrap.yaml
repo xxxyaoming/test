@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config-client1
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        # 这里写Eureka里面服务名
+        service-id: config
+      label: master
+      profile: test
+      username: user
+      password: 123456
+      fail-fast: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:8771/eureka/,http://eureka2:8772/eureka/,http://eureka3:8773/eureka/

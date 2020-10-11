@@ -1,0 +1,7 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:8771/eureka/,http://eureka3:8773/eureka/
+    register-with-eureka: true
+server:
+  port: 8772

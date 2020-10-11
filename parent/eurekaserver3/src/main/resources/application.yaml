@@ -1,0 +1,8 @@
+eureka:
+  client:
+    service-url:
+      # 其他Eureka服务地址
+      defaultZone: http://eureka1:8771/eureka/,http://eureka2:8772/eureka/
+    register-with-eureka: true
+server:
+  port: 8773
