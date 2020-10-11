@@ -21,7 +21,7 @@ public class HelloWorld {
 
     @RequestMapping("/hello")
     public String hello() {
-        return "这是调用eurekaclient1的返回结果：" + restTemplate.getForObject("http://EUREKACLIENT1/hello", String.class);
+        return "这是调用eurekaclient1的返回结果ggggggggggggggggggggggggggggggggggggg：" + restTemplate.getForObject("http://EUREKACLIENT1/hello", String.class);
     }
 
     @RequestMapping("/hellos")
